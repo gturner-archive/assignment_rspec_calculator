@@ -93,22 +93,21 @@ describe Calculator do
   end
 
   describe "#memory" do
-
-
-
     it "returns nil on new Calc object" do
       expect(calc.memory).to be_nil
     end
+    it "resets to nil after 1 call" do
+      calc.memory = 8
+      calc.memory
+      expect(calc.memory).to be_nil
+    end
+  end
 
+  describe "#memory=" do
     it "returns memory value when setting memory" do
-      set_return = calc.memory = 8
-      expect(set_return).to eq(9)
+      calc.memory = 8
+      expect(calc.memory).to eq(8)
     end
-
-    it "" do
-
-    end
-
   end
 
 
