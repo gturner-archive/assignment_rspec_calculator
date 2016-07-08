@@ -1,5 +1,7 @@
 require "calculator"
 require "spec_helper"
+
+
 describe Calculator do
 
   let(:calc){Calculator.new}
@@ -92,19 +94,21 @@ describe Calculator do
 
   describe "#memory" do
 
-    describe "persistent memory" do
-      before(:all) { calc.memory = 8 }
-      
-    end
 
 
     it "returns nil on new Calc object" do
       expect(calc.memory).to be_nil
     end
 
-    it "returns nil on new Calc object" do
-      expect(calc.memory).to be_nil
+    it "returns memory value when setting memory" do
+      set_return = calc.memory = 8
+      expect(set_return).to eq(9)
     end
+
+    it "" do
+
+    end
+
   end
 
 
